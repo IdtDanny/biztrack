@@ -15,7 +15,7 @@
     "db:generate": "yarn workspace @biztrack/database generate",
     "db:migrate": "yarn workspace @biztrack/database migrate",
     "db:seed": "yarn workspace @biztrack/database seed",
-    "build": "yarn workspaces foreach --all --parallel --topological run build"
+    "build": "yarn workspace @biztrack/shared build && yarn workspace @biztrack/backend build && yarn workspace @biztrack/frontend build"
   },
   "engines": {
     "node": ">=18"
