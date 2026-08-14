@@ -1,0 +1,33 @@
+{
+  "name": "biztrack",
+  "packageManager": "yarn@4.10.3",
+  "private": true,
+  "resolutions": {
+    "typescript": "5.4.5"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn dev:backend\" \"yarn dev:frontend\"",
+    "dev:backend": "yarn workspace @biztrack/backend dev",
+    "dev:frontend": "yarn workspace @biztrack/frontend dev",
+    "db:generate": "yarn workspace @biztrack/database generate",
+    "db:migrate": "yarn workspace @biztrack/database migrate",
+    "db:seed": "yarn workspace @biztrack/database seed",
+    "build": "yarn workspaces run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@prisma/config": "^7.9.1",
+    "@types/pg": "^8.21.0",
+    "concurrently": "^10.0.4",
+    "dotenv": "^17.4.2"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.9.1",
+    "pg": "^8.23.0"
+  }
+}
