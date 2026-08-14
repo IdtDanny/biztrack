@@ -1,6 +1,0 @@
-{
-  "buildCommand": "yarn workspace @biztrack/frontend build",
-  "installCommand": "yarn install",
-  "framework": "nextjs",
-  "outputDirectory": "packages/frontend/.next"
-}
