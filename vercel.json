@@ -1,10 +1,5 @@
 {
-  "projects": {
-    "biztrack-backend": {
-      "root": "packages/backend",
-      "buildCommand": "yarn build"
-    }
-  },
+  "buildCommand": "yarn build",
   "builds": [
     {
       "src": "packages/backend/src/index.ts",
@@ -14,7 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "packages/backend/dist/main.js"
+      "dest": "packages/backend/src/index.ts"
     }
   ]
 }
