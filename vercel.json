@@ -1,5 +1,7 @@
 {
   "buildCommand": "yarn build",
+  "outputDirectory": "packages/backend/dist",
+  "installCommand": "yarn install",
   "builds": [
     {
       "src": "packages/backend/src/index.ts",
