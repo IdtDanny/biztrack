@@ -3,6 +3,7 @@
   "packageManager": "yarn@4.10.3",
   "version": "1.0.0",
   "private": true,
+  "main": "dist/index.js",
   "scripts": {
     "prebuild": "prisma generate --schema ../database/prisma/schema.prisma",
     "build": "nest build",

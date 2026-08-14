@@ -4,14 +4,14 @@
   "outputDirectory": "packages/backend/dist",
   "builds": [
     {
-      "src": "packages/backend/dist/main.js",
+      "src": "packages/backend/dist/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "packages/backend/dist/main.js"
+      "dest": "packages/backend/dist/index.js"
     }
   ]
 }
