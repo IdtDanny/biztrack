@@ -4,11 +4,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prebuild": "prisma generate",
+    "prebuild": "prisma generate --schema ../database/prisma/schema.prisma",
     "build": "nest build",
     "start": "node dist/main",
     "dev": "nest start --watch",
     "test": "jest"
+  },
+  "prisma": {
+    "schema": "../database/prisma/schema.prisma"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
