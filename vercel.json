@@ -1,17 +1,16 @@
 {
-  "buildCommand": "yarn workspace @biztrack/backend build",
+  "buildCommand": "yarn install",
   "installCommand": "yarn install",
-  "outputDirectory": "packages/backend/dist",
   "builds": [
     {
-      "src": "packages/backend/dist/index.js",
+      "src": "packages/backend/src/index.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "packages/backend/dist/index.js"
+      "dest": "packages/backend/src/index.ts"
     }
   ]
 }
