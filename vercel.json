@@ -1,5 +1,20 @@
 {
-  "buildCommand": "yarn build",
-  "outputDirectory": "packages/frontend/.next",
-  "installCommand": "yarn install"
+  "projects": {
+    "biztrack-backend": {
+      "root": "packages/backend",
+      "buildCommand": "yarn build"
+    }
+  },
+  "builds": [
+    {
+      "src": "packages/backend/src/index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "packages/backend/dist/main.js"
+    }
+  ]
 }
