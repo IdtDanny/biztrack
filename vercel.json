@@ -1,0 +1,5 @@
+{
+  "buildCommand": "yarn build",
+  "outputDirectory": "packages/frontend/.next",
+  "installCommand": "yarn install"
+}
