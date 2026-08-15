@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: process.env.VERCEL ? undefined : 'standalone',
+  
   reactStrictMode: true,
   // images: {
   //   domains: ['localhost'],
@@ -15,7 +17,7 @@ const nextConfig = {
       },
     ],
   },
-  output: 'standalone',
+
   
   env: {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000',
